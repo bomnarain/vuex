@@ -24,9 +24,12 @@ const routes = [
     path: '/search',
     name: 'MapStateSearch',
     component: () => import(/* webpackChunkName: "map-state-search" */ '../views/MapStateSearch.vue')
-  }
-  
-  
+  },
+  {
+    path: '/change',
+    name: 'MapStateMutations',
+    component: () => import(/* webpackChunkName: "map-state-search" */ '../views/MapStateMutations.vue')
+  }  
 ]
 
 const router = new VueRouter({

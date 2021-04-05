@@ -24,6 +24,9 @@ export default new Vuex.Store({
   mutations: {
     increment (state) {
       state.count++
+    },
+    changeDoneState: function( state, item ){
+      item.done = !item.done
     }
   },
   actions: {},

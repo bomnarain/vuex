@@ -4,7 +4,8 @@
       <router-link to="/">Hello</router-link> | 
       <router-link to="/store">Store-Test</router-link> | 
       <router-link to="/map-state">mapState</router-link> | 
-      <router-link to="/search">mapStateSearch</router-link>
+      <router-link to="/search">mapStateSearch</router-link> | 
+      <router-link to="/change">MapStateMutations</router-link>
     </div>
     <router-view/>
   </div>
