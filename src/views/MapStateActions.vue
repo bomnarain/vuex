@@ -1,8 +1,10 @@
 <template>
   <div class="check">
     {{ $store.state.count }}
-    <div>
+    <div>      
       <h1>Todo List</h1>
+      <p> 카운터 : {{ counter }} </p>
+      <button v-on:click="onGetListClick">목록 가져오기</button>
       <button v-on:click="onBtnClick">{{getBtnText}}</button>
       <ul>
         <li v-for="item in todoList" v-bind:key="item.id"> 
@@ -21,10 +23,11 @@
 import { mapState } from 'vuex';
 
 export default {
-  name: 'MapStateMutations',
+  name: 'MapStateActions',
   data: function() {
     return {
       isFilter: false,
+      counter: 10,
       todoId: 1
     }
   },
@@ -58,7 +61,7 @@ export default {
     */
     onMutationClick: function (item) {
       this.$store.commit('changeDoneState', item)
-    }
+    },
     /* // commit 보기 좋게 
     onMutationClick: function (item) {
       this.$store.commit({
@@ -66,7 +69,21 @@ export default {
         item: item
       })
     } 
-    */   
+    */
+    onGetListClick: function() {
+      var self = this
+      var counterInterval
+      self.$store.dispatch('getTodoList')
+
+      counterInterval = setInterval( function() {
+        self.counter--;
+
+        if ( self.counter === 0) {
+          clearInterval( counterInterval )
+          self.counter = 10
+        }
+      }, 1000)
+    }
   }
 }
 </script>

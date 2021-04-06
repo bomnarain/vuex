@@ -5,7 +5,9 @@
       <router-link to="/store">Store-Test</router-link> | 
       <router-link to="/map-state">mapState</router-link> | 
       <router-link to="/search">mapStateSearch</router-link> | 
-      <router-link to="/change">MapStateMutations</router-link>
+      <router-link to="/change">MapStateMutations</router-link> | 
+      <router-link to="/actions">MapStateActions</router-link> | 
+      <router-link to="/modules">MapStateModules</router-link>
     </div>
     <router-view/>
   </div>

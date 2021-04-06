@@ -28,7 +28,17 @@ const routes = [
   {
     path: '/change',
     name: 'MapStateMutations',
-    component: () => import(/* webpackChunkName: "map-state-search" */ '../views/MapStateMutations.vue')
+    component: () => import(/* webpackChunkName: "map-state-Mutations" */ '../views/MapStateMutations.vue')
+  },
+  {
+    path: '/actions',
+    name: 'MapStateActions',
+    component: () => import(/* webpackChunkName: "map-state-search" */ '../views/MapStateActions.vue')
+  },
+  {
+    path: '/modules',
+    name: 'StoreModules',
+    component: () => import(/* webpackChunkName: "Store-Module" */ '../views/storeView/StoreModules')
   }  
 ]
 
